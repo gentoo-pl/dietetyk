@@ -2,7 +2,7 @@
 # @TODO - wprowadź zmianę w definicji kalsy tak aby użyty został layout 'backend'
 #         oraz aby kontroler był zabezpieczony hasłem
 #
-class Backend::KategorieController < ApplicationController
+class Backend::KategorieController < Backend::BaseController
   before_action :set_kategoria, only: [:show, :edit, :update, :destroy]
 
   ##############################################################################

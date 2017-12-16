@@ -12,23 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20171215214732) do
 
-  create_table "backend_elements", force: :cascade do |t|
-    t.string "nazwa"
-    t.integer "wartosc_energetyczna"
-    t.text "opis"
-    t.string "obrazek"
-    t.boolean "aktywny"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "backend_posileks", force: :cascade do |t|
-    t.string "nazwa"
-    t.integer "wartosc_energetyczna"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "dania", force: :cascade do |t|
     t.string "nazwa", null: false
     t.integer "suma_wartosci_energetycznej", default: 0
@@ -46,11 +29,6 @@ ActiveRecord::Schema.define(version: 20171215214732) do
     t.integer "danie_id", null: false
     t.integer "skladnik_id", null: false
     t.index ["danie_id", "skladnik_id"], name: "index_dania_skladniki_on_danie_id_and_skladnik_id"
-  end
-
-  create_table "elements_posileks", id: false, force: :cascade do |t|
-    t.integer "posilek_id", null: false
-    t.integer "element_id", null: false
   end
 
   create_table "kategorie", force: :cascade do |t|

@@ -16,8 +16,8 @@
     <% @kategorie.each do |kategoria| %>
       <tr>
         <td><%= kategoria.nazwa %></td>
-        <td><%= kategoria.aktywna %></td>
-        <td><%= "@TODO" %></td>
+        <td><%= fa_icon(kategoria.aktywna ? "check" : "times") %></td>
+        <td><%= kategoria.ilosc_dan %></td>
         <td><%= link_to 'Pokaż', [:backend, kategoria] %></td>
         <td><%= link_to 'Edytuj', edit_backend_kategoria_path(kategoria) %></td>
         <td><%= link_to 'Usuń', [:backend, kategoria], method: :delete, data: { confirm: 'Na pewno usunąć kategorię?' } %></td>

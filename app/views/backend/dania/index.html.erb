@@ -1,0 +1,40 @@
+<div class="large-8 columns">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Lista wszystkich dań</h1>
+
+  <table class="hover">
+    <thead>
+      <tr>
+        <th>Nazwa</th>
+        <th>Suma wartości energetycznej</th>
+        <th>Opis</th>
+        <th>Obrazek</th>
+        <th>Dodatkowa wartość energetyczna</th>
+        <th>Aktywne</th>
+        <th>Polecane</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @dania.each do |danie| %>
+        <tr>
+          <td><%= link_to danie.nazwa, [:backend, danie]  %></td>
+          <td><%= danie.suma_wartosci_energetycznej %></td>
+          <td><%= danie.opis %></td>
+          <td><%= image_tag danie.obrazek, width: 40 %></td>
+          <td><%= danie.dodatkowa_wartosc_energetyczna %></td>
+          <td><%= fa_icon(danie.aktywne ? "check" : "times") %></td>
+          <td><%= fa_icon(danie.polecane ? "check" : "times") %></td>
+          <td><%= link_to 'Edytuj', edit_backend_danie_path(danie) %></td>
+          <td><%= link_to 'Usuń', [:backend, danie], method: :delete, data: { confirm: 'Czy jesteś pewien, że chcesz usunąć danie?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'Dodaj nowe danie', new_backend_danie_path %>
+</div>

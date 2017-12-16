@@ -1,0 +1,32 @@
+<%= form_with(model: [:backend, kategoria], local: true) do |form| %>
+  <% if kategoria.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kategoria.errors.count, "error") %> powstrzymały przed zapisem:</h2>
+
+      <ul>
+      <% kategoria.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nazwa %>
+    <%= form.text_field :nazwa, id: :kategoria_nazwa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aktywna %>
+    <%= form.check_box :aktywna, id: :kategoria_aktywna %>
+  </div>
+
+  <div class="actions">
+    <%= link_to 'Anuluj',
+        backend_kategorie_path,
+        class: 'button',
+        data: { confirm: 'Czy na pewno chcesz wyjść z formularza?'} %>
+
+    <%= form.submit 'Zapisz', class: 'button success' %>
+  </div>
+<% end %>

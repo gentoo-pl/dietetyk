@@ -1,0 +1,2 @@
+module Fronted::WelcomesHelper
+end

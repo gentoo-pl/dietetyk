@@ -1,0 +1,8 @@
+<h1>Edycja składnika dań</h1>
+
+<div class="large-6 columns">
+    <%= render 'form', skladnik: @skladnik %>
+</div>
+
+<%= render 'obrazek' if !@skladnik.obrazek.blank? %>
+<br />

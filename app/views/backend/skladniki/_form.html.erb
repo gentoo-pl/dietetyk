@@ -1,0 +1,42 @@
+<%= form_with(model: [:backend,skladnik], local: true) do |form| %>
+  <% if skladnik.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(skladnik.errors.count, "error") %> powstrzymały ten składnik przed zapisaniem:</h2>
+
+      <ul>
+      <% skladnik.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nazwa %>
+    <%= form.text_field :nazwa, id: :skladnik_nazwa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wartosc_energetyczna %>
+    <%= form.number_field :wartosc_energetyczna, id: :skladnik_wartosc_energetyczna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :opis %>
+    <%= form.text_area :opis, id: :skladnik_opis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :obrazek %>
+    <%= form.text_field :obrazek, id: :skladnik_obrazek %>
+  </div>
+
+  <div class="actions">
+    <%= link_to 'Anuluj',
+        backend_skladniki_path,
+        class: 'button',
+        data: { confirm: 'Czy na pewno chcesz wyjść z formularza?'} %>
+
+    <%= form.submit 'Zapisz', class: 'button success' %>
+  </div>
+<% end %>

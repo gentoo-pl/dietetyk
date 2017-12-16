@@ -1,0 +1,6 @@
+<h1>Edycja kategorii</h1>
+
+<%= render 'form', kategoria: @kategoria %>
+
+<%= link_to 'Pokaż', [:backend, @kategoria], class: 'button' %>
+<%= link_to 'Wróć do listy', backend_kategorie_path, class: 'button' %>

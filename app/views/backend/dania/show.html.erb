@@ -1,0 +1,43 @@
+<div class='large-6 columns'>
+  <p id="notice"><%= notice %></p>
+
+
+  <p>
+    <h3>Szczegóły dania <b><%= @danie.nazwa %></b><h3>
+  </p>
+
+  <p>
+    <strong>Suma wartości energetycznej:</strong>
+    <%= @danie.suma_wartosci_energetycznej %>
+  </p>
+
+  <p>
+    <strong>Dodatkowa wartosc energetyczna:</strong>
+    <%= @danie.dodatkowa_wartosc_energetyczna %>
+  </p>
+
+  <p>
+    <strong>Opis:</strong>
+    <%= @danie.opis %>
+  </p>
+
+  <p>
+    <strong>Link do obrazka:</strong>
+    <%= @danie.obrazek %>
+  </p>
+
+  <p>
+    <strong>Aktywne:</strong>
+    <%= fa_icon(@danie.aktywne ? "check" : "times") %>
+  </p>
+
+  <p>
+    <strong>Polecane:</strong>
+    <%= fa_icon(@danie.polecane ? "check" : "times") %>
+  </p>
+
+  <%= link_to 'Edytuj', edit_backend_danie_path(@danie), class: 'button' %>
+  <%= link_to 'Przejdź do listy', backend_dania_path, class: 'button' %>
+</div>
+
+<%= render 'obrazek' if !@danie.obrazek.blank? %>

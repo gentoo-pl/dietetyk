@@ -1,0 +1,34 @@
+<div class="large-8 columns">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Lista wszystkich składników</h1>
+
+  <table class="hover">
+    <thead>
+      <tr>
+        <th>Nazwa</th>
+        <th>Wartosc energetyczna</th>
+        <th>Opis</th>
+        <th>Obrazek</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @skladniki.each do |skladnik| %>
+        <tr>
+          <td><%= link_to skladnik.nazwa, [:backend, skladnik]  %></td>
+          <td><%= skladnik.wartosc_energetyczna %></td>
+          <td><%= skladnik.opis %></td>
+          <td><%= image_tag skladnik.obrazek, width: 40 %></td>
+          <td><%= link_to 'Edytuj', edit_backend_skladnik_path(skladnik) %></td>
+          <td><%= link_to 'Usuń', [:backend, skladnik], method: :delete, data: { confirm: 'Czy jesteś pewien, że chcesz usunąć składnik?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'Dodaj nowy składnik', new_backend_skladnik_path %>
+</div>

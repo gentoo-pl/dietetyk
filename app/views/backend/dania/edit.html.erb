@@ -1,0 +1,8 @@
+<h1>Edycja dania</h1>
+
+<div class="large-6 columns">
+    <%= render 'form', danie: @danie %>
+</div>
+
+<%= render 'obrazek' if !@danie.obrazek.blank? %>
+<br />

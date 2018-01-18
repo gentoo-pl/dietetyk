@@ -13,6 +13,7 @@
         <th>Dodatkowa wartość energetyczna</th>
         <th>Aktywne</th>
         <th>Polecane</th>
+        <th>Ilość sklładników</th>
         <th colspan="2"></th>
       </tr>
     </thead>
@@ -23,10 +24,11 @@
           <td><%= link_to danie.nazwa, [:backend, danie]  %></td>
           <td><%= danie.suma_wartosci_energetycznej %></td>
           <td><%= danie.opis %></td>
-          <td><%= image_tag danie.obrazek, width: 40 %></td>
+          <td><%= image_tag(danie.obrazek, width: 40) unless danie.obrazek.blank? %></td>
           <td><%= danie.dodatkowa_wartosc_energetyczna %></td>
           <td><%= fa_icon(danie.aktywne ? "check" : "times") %></td>
           <td><%= fa_icon(danie.polecane ? "check" : "times") %></td>
+          <td><%= danie.skladniki.size %></td>
           <td><%= link_to 'Edytuj', edit_backend_danie_path(danie) %></td>
           <td><%= link_to 'Usuń', [:backend, danie], method: :delete, data: { confirm: 'Czy jesteś pewien, że chcesz usunąć danie?' } %></td>
         </tr>

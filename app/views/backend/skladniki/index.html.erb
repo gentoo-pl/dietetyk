@@ -20,7 +20,7 @@
           <td><%= link_to skladnik.nazwa, [:backend, skladnik]  %></td>
           <td><%= skladnik.wartosc_energetyczna %></td>
           <td><%= skladnik.opis %></td>
-          <td><%= image_tag skladnik.obrazek, width: 40 %></td>
+          <td><%= image_tag(skladnik.obrazek, width: 40) unless skladnik.obrazek.blank? %></td>
           <td><%= link_to 'Edytuj', edit_backend_skladnik_path(skladnik) %></td>
           <td><%= link_to 'Usuń', [:backend, skladnik], method: :delete, data: { confirm: 'Czy jesteś pewien, że chcesz usunąć składnik?' } %></td>
         </tr>

@@ -4,7 +4,7 @@ class CreateSkladniki < ActiveRecord::Migration[5.1]
       t.string :nazwa, null: false
       t.integer :wartosc_energetyczna, default: 0
       t.text :opis
-      t.string :obrazek
+      t.string :obrazek, default: ""
 
       t.timestamps
     end

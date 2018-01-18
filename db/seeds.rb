@@ -85,7 +85,8 @@ unless Skladnik.any?
     dodatkowa_wartosc_energetyczna: 100,
     obrazek: "http://plcdn.ar-cdn.com/recipes/originalxl/fe1653ed-4b17-4888-8901-d82c020d596c.jpg",
     opis: "Pieczony kurczak z obłędnie chrupiącą skórką",
-    kategoria_id: kategoria_obiad.id
+    kategoria_id: kategoria_obiad.id,
+    polecane: true
   )
 
   # Dodanie składników do dania
@@ -152,7 +153,8 @@ unless Skladnik.any?
     dodatkowa_wartosc_energetyczna: 20,
     obrazek: "http://plcdn.ar-cdn.com/recipes/port250/a8781074-9fe1-47e3-9697-962aa677225d.jpg",
     opis: "Przepyszne tosty czosnkowe, które pasują do każdego dania kuchni włoskiej.",
-    kategoria_id: kategoria_kolacja.id
+    kategoria_id: kategoria_kolacja.id,
+    polecane: true
   )
 
   # Dodanie składników do dania
@@ -173,7 +175,8 @@ unless Skladnik.any?
     dodatkowa_wartosc_energetyczna: 0,
     obrazek: "http://plcdn.ar-cdn.com/recipes/port960/e1d4a7be-630f-451e-9ea4-9191c7aba013.jpg",
     opis: "Super smaczna kanapka warzywna",
-    kategoria_id: kategoria_kolacja.id
+    kategoria_id: kategoria_kolacja.id,
+    polecane: true
   )
 
   # Dodanie składników do dania

@@ -12,31 +12,39 @@
                 </div>
                 <div class="csi-special-content">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="csi-special-single">
-                                <figure>
-                                    <a href="#"><img src="http://placehold.it/600x600" alt="Special Food"></a>
-                                    <figcaption>
-                                        <div class="csi-hover-link">
-                                            <div class="csi-vertical">
-                                                <a href="single-item.html">
-                                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                                <div class="single-info">
-                                    <div class="price-area">
-                                        <h3 class="price">558 <span>$</span></h3>
-                                    </div>
-                                    <div class="speacial-info">
-                                        <h4 class="subtitle">Mexican Food</h4>
-                                        <h3 class="title"><a href="single-item.html">Burger Mexicana</a></h3>
-                                    </div>
-                                </div>
-                            </div><!--//.csi-special-single-->
-                        </div>
+
+                        <% @polecane_dania.each do |danie| %>
+                          <div class="col-xs-12 col-sm-6 col-md-4">
+                              <div class="csi-special-single">
+                                  <figure>
+                                      <a href="">
+                                        <%= image_tag(danie.obrazek, alt: "Polecane - #{danie.nazwa}", width: "600") %>
+                                        <!-- <img src="http://placehold.it/600x600" alt="Special Food"> -->
+                                      </a>
+                                      <figcaption>
+                                          <div class="csi-hover-link">
+                                              <div class="csi-vertical">
+                                                  <a href="single-item.html">
+                                                      <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                                  </a>
+                                              </div>
+                                          </div>
+                                      </figcaption>
+                                  </figure>
+                                  <div class="single-info">
+                                      <div class="price-area">
+                                          <h3 class="price"><%= danie.suma_wartosci_energetycznej %> <span>kcal</span></h3>
+                                      </div>
+                                      <div class="speacial-info">
+                                          <h4 class="subtitle"><%= danie.kategoria&.nazwa %></h4>
+                                          <h3 class="title"><%= danie.nazwa %></h3>
+                                      </div>
+                                  </div>
+                              </div><!--//.csi-special-single-->
+                          </div>
+
+                        <% end %>
+
                     </div>
                 </div><!--//.csi-special-content-->
             </div><!-- //.CONTAINER -->

@@ -41,6 +41,7 @@ unless Skladnik.any?
 
   # Dodanie składników do dania
   danie.skladniki << skladniki
+  danie.touch # Przeliczenie wartości energetycznej
 
   ##############################################################################
 
@@ -62,7 +63,7 @@ unless Skladnik.any?
 
   # Dodanie składników do dania
   danie.skladniki << skladniki
-
+  danie.touch # Przeliczenie wartości energetycznej
 
 
 
@@ -89,7 +90,7 @@ unless Skladnik.any?
 
   # Dodanie składników do dania
   danie.skladniki << skladniki
-
+  danie.touch # Przeliczenie wartości energetycznej
   ##############################################################################
 
   # Utworenie tablicy skladników
@@ -109,7 +110,7 @@ unless Skladnik.any?
 
   # Dodanie składników do dania
   danie.skladniki << skladniki
-
+  danie.touch # Przeliczenie wartości energetycznej
 
   ##############################################################################
 
@@ -130,7 +131,7 @@ unless Skladnik.any?
 
   # Dodanie składników do dania
   danie.skladniki << skladniki
-
+  danie.touch # Przeliczenie wartości energetycznej
 
 
 
@@ -156,7 +157,7 @@ unless Skladnik.any?
 
   # Dodanie składników do dania
   danie.skladniki << skladniki
-
+  danie.touch # Przeliczenie wartości energetycznej
   ##############################################################################
 
   # Utworenie tablicy skladników
@@ -177,5 +178,5 @@ unless Skladnik.any?
 
   # Dodanie składników do dania
   danie.skladniki << skladniki
-
+  danie.touch # Przeliczenie wartości energetycznej
 end

@@ -16,9 +16,9 @@
 
                         <div class="csi-nav-pills-area">
                             <ul class="nav nav-pills csi-nav-pills">
-                              <li class="active"><a data-toggle="pill" href="#home"><img src="assets/img/tab-menu1.png" alt=""> Wszystkie</a></li>
+                              <li class="active"><a data-toggle="pill" href="#home"> Wszystkie</a></li>
                                 <% @kategorie.each do |kategoria| %>
-                                    <li><a data-toggle="pill" href="#<%= kategoria.nazwa.parameterize %>"><img src="assets/img/tab-menu2.png" alt=""> <%= kategoria.nazwa %></a></li>
+                                    <li><a data-toggle="pill" href="##<%= kategoria.nazwa.parameterize %>"> <%= kategoria.nazwa %></a></li>
                                 <% end %>
                             </ul>
                         </div>
@@ -29,7 +29,7 @@
                                 <% @dania.each do |danie| %>
                                   <div class="csi-single-tab">
                                       <div class="menu-thumb">
-                                          <a href="single-item.html">
+                                          <a href="" onClick="return false;">
                                             <%= image_tag(danie.obrazek, alt: "#{danie.nazwa}", width: "600") %>
                                             <!-- <img src="http://placehold.it/600x600" alt=""> -->
                                           </a>
@@ -37,7 +37,7 @@
                                       <div class="menu-content">
                                           <div class="csi-info">
                                               <div class="title-area">
-                                                  <h3 class="title"><a href="single-item.html"><%= danie.nazwa %></a></h3>
+                                                  <h3 class="title"><a><%= danie.nazwa %></a></h3>
                                                   <p class="price">
                                                       <%= danie.suma_wartosci_energetycznej %><span>kcal</span>
                                                   </p>
@@ -60,7 +60,7 @@
                                 <% kategoria.dania.each do |danie| %>
                                     <div class="csi-single-tab">
                                         <div class="menu-thumb">
-                                            <a href="single-item.html">
+                                            <a href="" onClick="return false;">
                                               <%= image_tag(danie.obrazek, alt: "#{danie.nazwa}", width: "600") %>
                                               <!-- <img src="http://placehold.it/600x600" alt=""> -->
                                             </a>
@@ -68,7 +68,7 @@
                                         <div class="menu-content">
                                             <div class="csi-info">
                                                 <div class="title-area">
-                                                    <h3 class="title"><a href="single-item.html"><%= danie.nazwa %></a></h3>
+                                                    <h3 class="title"><a><%= danie.nazwa %></a></h3>
                                                     <p class="price">
                                                         <%= danie.suma_wartosci_energetycznej %><span>kcal</span>
                                                     </p>

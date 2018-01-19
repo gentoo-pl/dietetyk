@@ -10,6 +10,7 @@
 #
 
 class Kategoria < ApplicationRecord
+  scope :aktywna, -> { where(aktywna: true) }
   has_many :dania
 
   #

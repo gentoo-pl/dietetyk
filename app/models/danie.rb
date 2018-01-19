@@ -16,10 +16,13 @@
 #
 
 class Danie < ApplicationRecord
+  scope :aktywne, -> { where(aktywne: true) } # pobierane z bazy tylko aktywne dania
+  scope :polecane, -> { where(polecane: true) } # pobierane z bazy tylko polecane
+
   # wywołanie metody :zapisz_sume_wartosci_energetycznej przed każdym zapisem do
   # bazy ( dodanie lub zmiana dania)
   after_save :zapisz_sume_wartosci_energetycznej
-  after_touch :zapisz_sume_wartosci_energetycznej
+  after_touch :zapisz_sume_wartosci_energetycznej # dla seedów
 
 
   # Danie może być złożone z wielu składników

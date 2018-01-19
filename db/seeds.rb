@@ -54,11 +54,12 @@ unless Skladnik.any?
 
   # stworzenie dania
   danie = Danie.create(
-    nazwa: "naleśniki z serem",
+    nazwa: "Naleśniki z serem",
     dodatkowa_wartosc_energetyczna: 70,
-    obrazek: "http://plcdn.ar-cdn.com/recipes/port960/b5aa0490-c513-4b5f-bee6-399c7400b16f.jpg",
+    obrazek: "https://cdn.katalogsmakow.pl/2013/11/11/0x600/nalesniki-z-serem.13988.jpg",
     opis: "Naleśniki z nadzieniem serowym to naleśniki posmarowane twarożkiem",
-    kategoria_id: kategoria_sniadanie.id
+    kategoria_id: kategoria_sniadanie.id,
+    polecane: true
   )
 
   # Dodanie składników do dania
@@ -153,8 +154,7 @@ unless Skladnik.any?
     dodatkowa_wartosc_energetyczna: 20,
     obrazek: "http://plcdn.ar-cdn.com/recipes/port250/a8781074-9fe1-47e3-9697-962aa677225d.jpg",
     opis: "Przepyszne tosty czosnkowe, które pasują do każdego dania kuchni włoskiej.",
-    kategoria_id: kategoria_kolacja.id,
-    polecane: true
+    kategoria_id: kategoria_kolacja.id
   )
 
   # Dodanie składników do dania

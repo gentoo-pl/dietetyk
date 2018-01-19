@@ -2027,10 +2027,12 @@ blockquote:before {
   position: relative;
   padding-right: 1rem;
 }
-.csi-tab-content .tab-pane .csi-single-tab .menu-thumb a {
+.csi-tab-content .tab-pane .csi-single-tab .menu-thumb a,
+.csi-tab-content .tab-pane .csi-single-tab .menu-thumb span {
   border-radius: 50%;
 }
-.csi-tab-content .tab-pane .csi-single-tab .menu-thumb a img {
+.csi-tab-content .tab-pane .csi-single-tab .menu-thumb a img,
+.csi-tab-content .tab-pane .csi-single-tab .menu-thumb span img {
   border-radius: 50%;
   border: 2rem solid #dddddd;
   -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);

@@ -44,7 +44,18 @@
 
     <%= render 'frontend/dania' %>
 
-    <%#= render 'frontend/kontakt' %>
+    <%# render 'frontend/kontakt' %>
+    <div class="row">
+      <div class="col-xs-12">
+          <div class="csi-heading">
+              <!-- <h3 class="subtitle">Book A Table New</h3> -->
+              <h2 class="title">Gdzie nas znajdziesz</h2>
+          </div>
+      </div>
+      <div class="col-xs-12 hidden-md-down">
+        <div class="map-canvas-default"></div>
+      </div>
+    </div>
 
     <%= render 'frontend/stopka' %>
 
@@ -53,7 +64,7 @@
 
 
 <!-- if load google maps then load this api, change api key as it may expire for limit cross as this is provided with any theme -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRTstGoEWx5YuF2_dx4qtvUwE6nJUNgRQ"></script>
 
 
 </body>

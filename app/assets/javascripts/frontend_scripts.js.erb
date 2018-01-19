@@ -255,38 +255,38 @@
             var mapCanvasDefault = $('.map-canvas-default');
             if (mapCanvasDefault.length) {
                 mapCanvasDefault.googleMap({
-                    zoom: 8, // Initial zoom level (optiona
-                    coords: [40.7127, 74.0059], // Map center (optional)
+                    zoom: 15, // Initial zoom level (optiona
+                    coords: [53.7438155,20.45371], // Map center (optional)
                     type: "ROADMAP", // Map type (optional),
                     mouseZoom: false
                 });
 
                 //for marker
                 mapCanvasDefault.addMarker({
-                    coords: [40.7127, 74.0059], // GPS coords
+                    coords: [53.7438155,20.45371], // GPS coords
                     title: 'PoliticX',
                     text: '121 King St, Melbourne VIC 3000, Australia',
-                    icon: csi_path + '/assets/img/map/map-icon.png'
+                    icon: csi_path + "<%= asset_path('map/map-icon.png') %>"
                 });
             }
 
             // FOR DARK MAP
-            if (mapCanvasDefault.length) {
-                mapCanvasDefault.googleMap({
-                    zoom: 8, // Initial zoom level (optiona
-                    coords: [40.7127, 74.0059], // Map center (optional)
-                    type: "HYBRID", // Map type (optional),
-                    mouseZoom: false
-                });
-
-                //for marker
-                mapCanvasDefault.addMarker({
-                    coords: [40.7127, 74.0059], // GPS coords
-                    title: 'PoliticX',
-                    text: '121 King St, Melbourne VIC 3000, Australia',
-                    icon: csi_path + '/assets/img/map/map-icon.png'
-                });
-            }
+            // if (mapCanvasDefault.length) {
+            //     mapCanvasDefault.googleMap({
+            //         zoom: 8, // Initial zoom level (optiona
+            //         coords: [53.7438155,20.45371], // Map center (optional)
+            //         type: "HYBRID", // Map type (optional),
+            //         mouseZoom: false
+            //     });
+            //
+            //     //for marker
+            //     mapCanvasDefault.addMarker({
+            //         coords: [53.7438155,20.45371], // GPS coords
+            //         title: 'PoliticX',
+            //         text: '121 King St, Melbourne VIC 3000, Australia',
+            //         icon: csi_path + '/assets/img/map/map-icon.png'
+            //     });
+            // }
         }
 
         /*=========================================================================

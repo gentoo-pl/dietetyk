@@ -1755,7 +1755,7 @@ blockquote:before {
 /* 2.6 SPECIAL SECTION
 ---------------------------------------------------------------------*/
 .csi-special .csi-inner {
-  background-image: url(http://placehold.it/574x316), url(http://placehold.it/574x316);
+  // background-image: url(http://placehold.it/574x316), url(http://placehold.it/574x316);
   background-repeat: no-repeat;
   background-position: 0 100%, 100% 100%;
   padding-bottom: 6.8rem;
@@ -1956,7 +1956,7 @@ blockquote:before {
 /* 2.7  MENU SECTION
 ---------------------------------------------------------------------*/
 .csi-menu {
-  background: url('http://placehold.it/1920x1188') top center no-repeat fixed;
+  // background: url('http://placehold.it/1920x1188') top center no-repeat fixed;
   -webkit-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -3107,7 +3107,7 @@ blockquote:before {
 /* 2.13 FOOTER
 ---------------------------------------------------------------------*/
 .csi-footer {
-  background: url('http://placehold.it/1920x613') bottom center no-repeat;
+  // background: url('http://placehold.it/1920x613') bottom center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -3209,7 +3209,7 @@ blockquote:before {
   font-family: 'Lato', sans-serif;
   padding: 2.6rem 0;
   background: #e62b4c;
-  margin-top: 11rem;
+  margin-top: 1rem;
   text-align: center;
 }
 .csi-footer .csi-footer-bottom p {

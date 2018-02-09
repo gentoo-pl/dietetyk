@@ -1,5 +1,21 @@
-<h1>BLALLALAL Backend::Welcomes#home</h1>
-<p>Find me in app/views/backend/welcomes/home.html.erb</p>
-
-@TODO Wykorzystaj boxy 
-https://foundation.zurb.com/sites/docs/v/5.5.3/components/panels.html
+<br />
+<h1 class="text-center">Witaj w panelu administracyjnym</h1>
+<br/>
+<div class='large-2 large-offset-3 columns'>
+  <div class="panel callout radius text-center">
+    <h5>Ilość kategorii</h5>
+    <h3><%= @ilosc_kategorii %></h3>
+  </div>
+</div>
+<div class='large-2 columns text-center'>
+  <div class="panel callout radius">
+    <h5>Ilość dań</h5>
+    <h3><%= @ilosc_dan %></h3>
+  </div>
+</div>
+<div class='large-2 columns text-center end'>
+  <div class="panel callout radius">
+    <h5>Ilość składników</h5>
+    <h3><%= @ilosc_skladnikow %></h3>
+  </div>
+</div>

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20171215214732) do
     t.string "nazwa", null: false
     t.integer "suma_wartosci_energetycznej", default: 0
     t.integer "dodatkowa_wartosc_energetyczna", default: 0
-    t.string "obrazek"
+    t.string "obrazek", default: ""
     t.boolean "aktywne", default: true
     t.text "opis"
     t.boolean "polecane", default: false
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20171215214732) do
     t.string "nazwa", null: false
     t.integer "wartosc_energetyczna", default: 0
     t.text "opis"
-    t.string "obrazek"
+    t.string "obrazek", default: ""
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

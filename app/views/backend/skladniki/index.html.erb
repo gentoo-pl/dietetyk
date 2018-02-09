@@ -1,5 +1,6 @@
 <div class="large-8 columns">
-  <p id="notice"><%= notice %></p>
+
+  <%= render 'backend/notice', notice: notice if notice %>
 
   <h1>Lista wszystkich składników</h1>
 

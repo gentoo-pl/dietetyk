@@ -1,3 +1,26 @@
+```
+[PREZENTACJA](https://tinyurl.com/prezentacja-ud)
+
+[Strona](https://dietetyk-ud.herokuapp.com)
+
+[Backend](https://dietetyk-ud.herokuapp.com/backend)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Zainstaluj potrzebne paczki do uruchomienia aplikacji:
 ```sh
 sudo apt-get install libpq-dev

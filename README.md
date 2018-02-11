@@ -15,12 +15,6 @@
 
 
 
-
-
-
-
-
-
 Zainstaluj potrzebne paczki do uruchomienia aplikacji:
 ```sh
 sudo apt-get install libpq-dev
